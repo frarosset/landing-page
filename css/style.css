@@ -1,0 +1,86 @@
+*{
+	box-sizing: border-box;
+	padding:  0;
+	margin: 0;
+}
+
+body{
+	max-width: 1000px;
+	margin:  0 auto;
+}
+
+
+/* Body */
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	min-height: 100vh;
+}
+
+/* Header */
+
+header nav ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	list-style: none;
+}
+
+header .logo{
+	margin-right: auto;
+}
+
+/* Hero */
+
+.hero{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;	
+}
+
+button.book {
+	text-align: center;
+}
+
+/* Main */
+main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* Info Section */
+/*.info{
+	flex: 1;
+}*/
+
+.info,
+.info li{
+	text-align:  center;
+}
+
+.info ul{
+	display: flex;
+	justify-content: center;
+}
+
+/* Quote section */
+.quote .author{
+	text-align: right;
+}
+
+/* Signup section */
+.signup{
+	display: flex;
+	justify-self: space-around;
+	align-items: center;
+}
+
+/* Footer */
+footer{
+	text-align: center;
+}

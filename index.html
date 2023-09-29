@@ -8,67 +8,76 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class='content-column'>
          	<ul>
           		<li class='logo'>Venice and surroundings</li>
-          		<li>The trips</li>
+          		<li>Trips</li>
           		<li>Schedule</li>
           		<li>Contacts</li>
         	<ul>
         </nav>
 
-        <div class='hero'>
+        <div class='content-column hero-column'>
         	<div class='hero-txt'>
 	        	<h1>Explore Venice and its surroundings</h1>
 	        	<p>Embark on an unforgettable boat trip across the Venetian lagoon to discover Venice and its surrounding islands!</p>
 	        	<button class='book' type="button">Book now!</button>
-	        	<image src="" alt="">
         	</div>
-        	<img src='./img/hero.jpg' alt='A view of a boat in the Venetian lagoon at sunset.'>	
+        	<div class='hero-img'>
+        		<img src='./img/hero.jpg' alt='A view of a boat in the Venetian lagoon at sunset.'>
+        	</div>
         </div>
     </header>
 
     <main>
         <section class='info'>
-	        <h2>The main places you'll visit</h2>
-	        <ul>
-	        	<li>
-	        		<img src='./img/grandcanal-small.jpg' alt='A view of the Grand Canal in Venice.'>
-	        		<strong>Gran Canal.</strong> The main waterway running through Venice.
-	        	</li>
-	      		<li>
-	      			<img src='./img/murano-small.jpg' alt='A view of a canal in Murano island.'>
-	      			<strong>Murano Island.</strong> Renowned worldwide for its blown glass glassware.
-	      		</li>
-	        	<li>
-	        		<img src='./img/burano-small.jpg' alt='A view of a canal in Burano island, and the colorful  overlooking houses.'>
-	        		<strong>Burano Island.</strong> Famous for its lacework and brightly colored houses.
-	        	</li>
-	        	<li>
-	        		<img src='./img/torcello-small.jpg' alt='A view of a canal in Torcello island.'>
-	        		<strong>Torcello Island.</strong> Full of historical significance as the birthplace of Venice.
-	        	</li>
-	        </ul> 	
+        	<div class=' content-column info-column'>
+		        <h2>Some places you'll visit:</h2>
+		        <ul>
+		        	<li>
+		        		<img src='./img/grandcanal-small.jpg' alt='A view of the Grand Canal in Venice.'>
+		        		<strong>Gran Canal</strong> The main waterway running through Venice.
+		        	</li>
+		      		<li>
+		      			<img src='./img/murano-small.jpg' alt='A view of a canal in Murano island.'>
+		      			<strong>Murano Island</strong> Renowned worldwide for its blown glass glassware.
+		      		</li>
+		        	<li>
+		        		<img src='./img/burano-small.jpg' alt='A view of a canal in Burano island, and the colorful  overlooking houses.'>
+		        		<strong>Burano Island</strong> Famous for its lacework and brightly colored houses.
+		        	</li>
+		        	<li>
+		        		<img src='./img/torcello-small.jpg' alt='A view of a canal in Torcello island.'>
+		        		<strong>Torcello Island</strong> Full of historical significance as the birthplace of Venice.
+		        	</li>
+		        </ul>
+		    </div>
         </section>
 
         <section class='quote'>
-			<blockquote>
-				<p>If anything can rival Venice in its beauty, it must be its reflection at sunset in the Grand Canal.</p>
-			</blockquote>
-			<p class='author'>— Peggy Guggenheim</p>
+        	<div class='content-column quote-column'>
+				<blockquote>
+					<p>If anything can rival Venice in its beauty, it must be its reflection at sunset in the Grand Canal.</p>
+				</blockquote>
+				<p class='author'>— Peggy Guggenheim</p>
+			</div>
         </section>
 
         <section class='signup'>
-        	<div class='signup-txt'>
-	          	<h2>What are you waiting for?</h2>
-	          	<p>Book your trip to discover the surroundings of Venice!</p>
+        	<div class='content-column signup-column'>
+	        	<div class='signup-txt'>
+		          	<h2>What are you waiting for?</h2>
+		          	<p>Book your trip to discover the surroundings of Venice!</p>
+		        </div>
+	        	<button type="button">Book now!</button>
 	        </div>
-        	<button type="button">Book now!</button>
         </section>
     </main>
 
     <footer>
-     	Copyright © The Odin Project 2023   
+    	<div class='content-column'>
+     		Copyright © The Odin Project 2023
+     	</div>
     </footer>
 </body>
 </html>

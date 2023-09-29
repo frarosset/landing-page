@@ -1,25 +1,66 @@
-*{
+:root {
+  --darkblue: #1f2937;
+  --white: #f9faf8;
+  --lightblue: #3882f6;
+  --grey: #e5e7eb;
+}
+
+html {
+	background-color: var(--white); /*#fafafa; */
+	color: yellow;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 100%;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+* { 
+ 	font-family: inherit;
+	line-height: inherit;
+	color: inherit;
 	box-sizing: border-box;
 	padding:  0;
 	margin: 0;
 }
 
 body{
-	max-width: 1000px;
 	margin:  0 auto;
+	min-height: 100vh; /*it is assumed the same for <html>*/
+	width: 100%; /* or max-width -- this avoids horizontal scroll bars */
 }
 
+/*******************************/
 
-/* Body */
+/* Body ---------------------------------- */
 body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: stretch;
-	min-height: 100vh;
 }
 
-/* Header */
+section
+{
+	width: 100%;
+}
+
+.content-column{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Header / Footer ----------------------- */
+header,footer{
+	background-color: var(--darkblue);
+}
+
+footer{
+	text-align: center;
+}
+
+
+/* Nav and Hero*/
 
 header nav ul{
 	display: flex;
@@ -28,59 +69,170 @@ header nav ul{
 	list-style: none;
 }
 
-header .logo{
-	margin-right: auto;
+header nav ul,
+.hero-column,
+footer
+{
+	color: var(--grey);
+	font-size: 18px;
 }
 
-/* Hero */
+header nav .logo{
+	/* Push the logo on the right*/
+	margin-right: auto;
+	font-variant: small-caps;
+	/* This overrides the nav text color */
+	color: var(--white);
+	font-size: 24px;
+}
 
-.hero{
+.hero-column{
 	display: flex;
 	justify-content: space-between;
-	list-style: none;	
 }
 
-button.book {
+.hero-column h1{
+	color: var(--white);
+	font-size: 48px;
+	font-weight: extra-bold;
+}
+
+.hero-column button{
+	background-color: var(--lightblue);
+	border: 2px solid var(--dark-blue);
 	text-align: center;
+	color: var(--white);
+	font-size: 18px;
 }
 
-/* Main */
+.hero-txt,
+.hero-img{
+  flex: 1;
+}
+
+.hero-img img{
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* TODO: fix img height */
+
+
+/* Main ---------------------------------- */
 main {
-	flex: 1;
+	/* Push the header and footer to the top/bottom */
+	flex-grow: 1;
+	/* Apply flex to its elements, to better distribute content */
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	/*justify-content: space-around;*/
 	align-items: center;
 }
 
-/* Info Section */
-/*.info{
+.info{
+	flex: 2;
+}
+.quote,
+.signup{
 	flex: 1;
-}*/
+	/*Center the elements within*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-.info,
-.info li{
+/* Info */
+
+.info{
 	text-align:  center;
 }
 
-.info ul{
+.info-column h2{
+	color: var(--darkblue);
+	font-size: 36px;
+	font-weight: extra-bold; /********/
+}
+
+.info-column ul{
 	display: flex;
 	justify-content: center;
+	color: var(--darkblue);
+	font-size: 18px;
 }
 
-/* Quote section */
-.quote .author{
-	text-align: right;
+.info-column strong{
+	font-variant: small-caps;
+	color: var(--darkblue);
+	font-size: 22px;
 }
 
-/* Signup section */
-.signup{
+.info-column li{
+	flex: 1;
 	display: flex;
-	justify-self: space-around;
 	align-items: center;
+	flex-direction: column;
+	max-width: 250px;	
+  	width: 250px;
 }
 
-/* Footer */
-footer{
-	text-align: center;
+.info-column img{
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Quote */
+
+.quote{
+	background-color: var(--grey);
+}
+
+.quote-column blockquote{
+	color: var(--darkblue);
+	font-size: 36px;
+	font-weight: lighter; /********/
+	font-style: italic;
+}
+
+.quote-column .author{
+	color: var(--darkblue);
+	text-align: right;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Signup */
+
+.signup-column{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--lightblue);
+	color: var(--white);
+	font-size: 18px;
+}
+
+.signup-column h2{
+	font-size: 24px;
+	color: var(--white);
+}
+
+.signup-column p{
+	color: var(--grey);
+}
+
+.signup-column button{
+	background-color: var(--lightblue);
+	color: var(--white);
+	font-size: 18px;
+	border: 2px solid var(--white);
+}
+
+button, /*all buttons*/
+.signup-column{
+	border-radius: 8px;
 }

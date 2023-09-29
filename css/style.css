@@ -1,16 +1,31 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@700&display=swap');
+
+
 :root {
+	/* Colors */
   --darkblue: #1f2937;
   --white: #f9faf8;
   --lightblue: #3882f6;
   --grey: #e5e7eb;
+
+  /* Font sizes */
+  --regular-font: 18px;
+  --large-font: 24px;
+  --larger-font: 36px;
+  --title-font: 48px;
+
+  /* Font family */
+  --main-font: 'Inter';
+  --hdr-font: 'Montserrat';
 }
 
 html {
 	background-color: var(--white); /*#fafafa; */
-	color: yellow;
-	font-family: Trebuchet MS, sans-serif;
-	font-size: 100%;
-	font-weight: 300;
+	color:  var(--grey);
+	font-family: var(--main-font), sans-serif;
+	/*font-size: 100%;*/
+	font-weight: 400;
 	line-height: 1.2;
 }
 
@@ -50,6 +65,14 @@ section
 	margin: 0 auto;
 }
 
+
+.logo, 
+h1,
+h2,
+.info-column strong{
+	font-family: var(--hdr-font);
+}
+
 /* Header / Footer ----------------------- */
 header,footer{
 	background-color: var(--darkblue);
@@ -74,7 +97,7 @@ header nav ul,
 footer
 {
 	color: var(--grey);
-	font-size: 18px;
+	font-size: var(--regular-font);
 }
 
 header nav .logo{
@@ -83,7 +106,7 @@ header nav .logo{
 	font-variant: small-caps;
 	/* This overrides the nav text color */
 	color: var(--white);
-	font-size: 24px;
+	font-size: var(--large-font);
 }
 
 .hero-column{
@@ -93,8 +116,8 @@ header nav .logo{
 
 .hero-column h1{
 	color: var(--white);
-	font-size: 48px;
-	font-weight: extra-bold;
+	font-size: var(--title-font);
+	font-weight: bold;
 }
 
 .hero-column button{
@@ -102,7 +125,7 @@ header nav .logo{
 	border: 2px solid var(--dark-blue);
 	text-align: center;
 	color: var(--white);
-	font-size: 18px;
+	font-size: var(--regular-font);
 }
 
 .hero-txt,
@@ -152,21 +175,21 @@ main {
 
 .info-column h2{
 	color: var(--darkblue);
-	font-size: 36px;
-	font-weight: extra-bold; /********/
+	font-size: var(--larger-font);
+	font-weight: bold;
 }
 
 .info-column ul{
 	display: flex;
 	justify-content: center;
 	color: var(--darkblue);
-	font-size: 18px;
+	font-size: var(--regular-font);
 }
 
 .info-column strong{
 	font-variant: small-caps;
 	color: var(--darkblue);
-	font-size: 22px;
+	font-size: var(--large-font);
 }
 
 .info-column li{
@@ -193,15 +216,15 @@ main {
 
 .quote-column blockquote{
 	color: var(--darkblue);
-	font-size: 36px;
-	font-weight: lighter; /********/
+	font-size: var(--larger-font);
+	font-weight: 300;
 	font-style: italic;
 }
 
 .quote-column .author{
 	color: var(--darkblue);
 	text-align: right;
-	font-size: 24px;
+	font-size: var(--large-font);
 	font-weight: bold;
 }
 
@@ -213,11 +236,11 @@ main {
 	align-items: center;
 	background-color: var(--lightblue);
 	color: var(--white);
-	font-size: 18px;
+	font-size: var(--regular-font);
 }
 
 .signup-column h2{
-	font-size: 24px;
+	font-size: var(--large-font);
 	color: var(--white);
 }
 
@@ -228,7 +251,7 @@ main {
 .signup-column button{
 	background-color: var(--lightblue);
 	color: var(--white);
-	font-size: 18px;
+	font-size: var(--regular-font);
 	border: 2px solid var(--white);
 }
 

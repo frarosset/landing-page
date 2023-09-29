@@ -13,11 +13,24 @@
   --regular-font: 18px;
   --large-font: 24px;
   --larger-font: 36px;
-  --title-font: 48px;
+  --title-font: 47px;
 
   /* Font family */
   --main-font: 'Inter';
   --hdr-font: 'Montserrat';
+
+  /*Margins and paddings*/
+  --base-padding: 10px;
+  --base-gap: 2em;
+  --column-padding: 100px 30px; /*info-column,signup-column*/
+  --hero-padding: 100px var(--base-padding);
+  --quote-padding: 4em 5em;
+  --quote-gap: 1em;
+  --banner-padding: 50px;
+  --main-gap: 0.5em;
+
+  /* Maximum column width */
+  --col-width: 250px;
 }
 
 html {
@@ -78,6 +91,10 @@ header,footer{
 	background-color: var(--darkblue);
 }
 
+header nav, footer{
+	padding: var(--base-padding);
+}
+
 footer{
 	text-align: center;
 }
@@ -90,6 +107,7 @@ header nav ul{
 	justify-content: space-between;
 	align-items: baseline;
 	list-style: none;
+	gap: var(--base-gap);
 }
 
 header nav ul,
@@ -109,9 +127,12 @@ header nav .logo{
 	font-size: var(--large-font);
 }
 
+
 .hero-column{
 	display: flex;
 	justify-content: space-between;
+	padding: 	var(--hero-padding);
+	gap: var(--base-gap);
 }
 
 .hero-column h1{
@@ -133,12 +154,24 @@ header nav .logo{
   flex: 1;
 }
 
+.hero-txt{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--main-gap);
+}
+
+.hero-txt p{
+	margin-bottom: auto;
+}
+
 .hero-img img{
   max-width: 100%;
   width: 100%;
   max-height: 100%;
   height: 100%; 
   object-fit: cover;
+  border: 4px solid var(--white);
 }
 
 /* TODO: fix img height */
@@ -158,13 +191,18 @@ main {
 .info{
 	flex: 2;
 }
-.quote,
 .signup{
 	flex: 1;
 	/*Center the elements within*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+/* do not expand quote section */
+
+.info-column,
+.signup-column{
+	padding: 	var(--column-padding);
 }
 
 /* Info */
@@ -177,6 +215,7 @@ main {
 	color: var(--darkblue);
 	font-size: var(--larger-font);
 	font-weight: bold;
+	padding-bottom: var(--base-gap);
 }
 
 .info-column ul{
@@ -184,12 +223,15 @@ main {
 	justify-content: center;
 	color: var(--darkblue);
 	font-size: var(--regular-font);
+	gap: var(--base-gap);
 }
 
 .info-column strong{
 	font-variant: small-caps;
 	color: var(--darkblue);
 	font-size: var(--large-font);
+	padding-top: var(--main-gap);
+	padding-bottom: var(--main-gap);
 }
 
 .info-column li{
@@ -197,8 +239,8 @@ main {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	max-width: 250px;	
-  	width: 250px;
+	max-width: var(--col-width);	
+  width: var(--col-width);
 }
 
 .info-column img{
@@ -214,6 +256,10 @@ main {
 	background-color: var(--grey);
 }
 
+.quote-column{
+	padding: var(--quote-padding);
+}
+
 .quote-column blockquote{
 	color: var(--darkblue);
 	font-size: var(--larger-font);
@@ -222,6 +268,7 @@ main {
 }
 
 .quote-column .author{
+	padding-top: var(--quote-gap);
 	color: var(--darkblue);
 	text-align: right;
 	font-size: var(--large-font);
@@ -230,32 +277,40 @@ main {
 
 /* Signup */
 
-.signup-column{
+.signup-banner{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	background-color: var(--lightblue);
 	color: var(--white);
 	font-size: var(--regular-font);
+	padding: var(--banner-padding);
+	gap: var(--main-gap);
 }
 
-.signup-column h2{
+.signup-banner h2{
 	font-size: var(--large-font);
 	color: var(--white);
 }
 
-.signup-column p{
+.signup-banner p{
+	padding-top: var(--main-gap);
 	color: var(--grey);
 }
 
-.signup-column button{
+.signup-banner button{
 	background-color: var(--lightblue);
 	color: var(--white);
-	font-size: var(--regular-font);
+	font-size: var(--large-font);
 	border: 2px solid var(--white);
 }
 
 button, /*all buttons*/
-.signup-column{
+.signup-banner{
 	border-radius: 8px;
+}
+
+button{
+	padding: var(--base-padding);
+	text-wrap: nowrap;
 }
